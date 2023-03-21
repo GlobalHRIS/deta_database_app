@@ -10,8 +10,8 @@ import database as db  # local import
 # -------------- SETTINGS --------------
 incomes = ["Salary", "Blog", "Other Income"]
 expenses = ["Rent", "Utilities", "Groceries", "Car", "Other Expenses", "Saving"]
-currency = "USD"
-page_title = "Income and Expense Tracker"
+currency = "GBP"
+page_title = "Employee Database updater"
 page_icon = ":money_with_wings:"  # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 layout = "centered"
 # --------------------------------------
@@ -44,13 +44,13 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 # --- NAVIGATION MENU ---
 selected = option_menu(
     menu_title=None,
-    options=["Data Entry", "Data Visualization"],
+    options=["Employee Data Entry", "Data Visualization"],
     icons=["pencil-fill", "bar-chart-fill"],  # https://icons.getbootstrap.com/
     orientation="horizontal",
 )
 
 # --- INPUT & SAVE PERIODS ---
-if selected == "Data Entry":
+if selected == "Employee Data Entry":
     st.header(f"Data Entry in {currency}")
     with st.form("entry_form", clear_on_submit=True):
         col1, col2 = st.columns(2)
